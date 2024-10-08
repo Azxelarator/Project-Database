@@ -1,0 +1,81 @@
+.gradient-custom {
+    /* fallback for old browsers */
+    background: #f6d365;
+    
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: -webkit-linear-gradient(to right bottom, rgba(246, 211, 101, 1), rgba(253, 160, 133, 1));
+    
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: linear-gradient(to right bottom, rgba(246, 211, 101, 1), rgba(253, 160, 133, 1))
+    }
+
+form {
+    margin-bottom: 20px;
+}
+
+form textarea {
+    width: 100%;
+    height: 100px;
+    margin-bottom: 10px;
+}
+
+form input[type="file"] {
+    margin-bottom: 10px;
+}
+
+.posts {
+    margin-top: 20px;
+}
+
+.post {
+    border: 1px solid #ccc; /* ขอบของกล่องโพสต์ */
+    padding: 15px; /* ระยะห่างภายในกล่อง */
+    background-color: #fff; /* สีพื้นหลังของกล่องโพสต์ */
+    border-radius: 5px; /* มุมโค้งของกล่อง */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* เงาให้กับกล่อง */
+}
+
+@media (min-width: 992px) {
+    .card {
+        max-width: 960px; /* หรือขนาดที่คุณต้องการ */
+        margin: 0 auto;
+        min-height: auto; /* Adjust this value as needed */
+    }
+}
+
+.gradient-custom {
+    min-height: 100%; /* ให้พื้นหลังสีไล่ระดับครอบคลุมความสูงทั้งหมด */
+}
+
+.card-body {
+    padding: 2rem; /* เพิ่ม padding ภายในเพื่อให้เนื้อหาไม่ชิดขอบมากเกินไป */
+}
+
+.centered {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%; /* Ensure it takes full height */
+}
+
+/* เพิ่ม CSS ข้อความAdmin and Member ใหม่ตรงนี้ */
+/* เพิ่ม CSS สำหรับ Rank badge */
+.rank-badge {
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 15px;
+    font-weight: bold;
+    font-size: 16px; /* เพิ่มขนาดตัวหนังสือ */
+}
+
+.rank-admin {
+    color: #ff0000; /* สีแดงสำหรับ Admin */
+    background-color: #ffeeee; /* พื้นหลังสีอ่อนๆ เพื่อให้อ่านง่าย */
+    border: 2px solid #ff0000;
+}
+
+.rank-member {
+    color: #0000ff; /* สีน้ำเงินสำหรับ Member */
+    background-color: #eeeeff; /* พื้นหลังสีอ่อนๆ เพื่อให้อ่านง่าย */
+    border: 2px solid #0000ff;
+}

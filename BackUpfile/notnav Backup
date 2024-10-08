@@ -1,0 +1,46 @@
+
+<style>
+    <?php include "css/nav-menu.css"?>
+    <?php include 'usercheck.php'?>
+    </style>
+
+<header id="navbar" class="p-3 text-bg-dark sticky-top">
+    <div class="container">
+        <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+            <a href="index.php" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
+                Let Talk
+                <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap">
+                    <use xlink:href="#bootstrap"></use>
+                </svg>
+            </a>
+
+            <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+                <li><a href="index.php" class="nav-link px-2 text-secondary start-home">Home</a></li>
+                <li><a href="dashboard.php" class="nav-link px-2 text-white start-about">Dashboard</a></li>
+                <li><a href="#" class="nav-link px-2 text-white start-blog">Pricing</a></li>
+            </ul>
+            <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search" action="profileuser.php" method="get" onsubmit="return this.username.value.trim() !== '';">
+                <input type="search" class="form-control form-control-dark text-bg-dark" name="username" 
+                    placeholder="Search for a user..." aria-label="Search" required>
+            </form>
+
+            <div class="text-end">
+                <?php if (!isset($_SESSION['user_id'])) { ?>
+                    <a href="login.php" class="btn btn-outline-light me-2">Login</a>
+                    <a href="register.php" class="btn btn-warning">Sign-up</a>
+                <?php } else { 
+                    $userlevel = isset($_SESSION['userlevel']) ? $_SESSION['userlevel'] : 0; 
+                ?>
+                    <?php if ($userlevel == 1) { ?>
+                        <a href="adminpage.php" class="btn btn-danger">Admin Page</a>
+                        <a href="profile.php" class="btn btn-danger">Profile</a>
+                        <a href="logout.php" class="btn btn-danger">Logout</a>
+                    <?php } else { ?>
+                        <a href="profile.php" class="btn btn-info">Profile</a>
+                        <a href="logout.php" class="btn btn-danger">Logout</a>
+                    <?php } ?>
+                <?php } ?>
+            </div>
+        </div>
+    </div>
+</header>

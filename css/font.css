@@ -1,0 +1,18 @@
+.taviraj-thin {
+  font-family: "Taviraj", serif;
+  font-weight: 100;
+  font-style: normal;
+}
+
+.taviraj-regular {
+  font-family: "Taviraj", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+img {
+  object-fit: cover;
+  width: 140;
+  height: 140;
+}
+  
